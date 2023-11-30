@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8" /> <!-- charset -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- viewport -->
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+		<!-- Bootstrap CSS -->
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- Bootstrap JS -->
+	
+		<script>
+			function showMasters(){
+				var masters = document.getElementById("masters");
+				var pga = document.getElementById("pga");
+				var us = document.getElementById("us");
+				var open = document.getElementById("open");
+				if (masters.style.display === "none") {
+					masters.style.display = "block";
+					pga.style.display = "none";
+					us.style.display = "none";
+					open.style.display = "none";
+				}
+			}
+			
+			function showPGA(){
+				var masters = document.getElementById("masters");
+				var pga = document.getElementById("pga");
+				var us = document.getElementById("us");
+				var open = document.getElementById("open");
+				if (pga.style.display === "none") {
+					masters.style.display = "none";
+					pga.style.display = "block";
+					us.style.display = "none";
+					open.style.display = "none";
+				}
+			}
+			
+			function showUS(){
+				var masters = document.getElementById("masters");
+				var pga = document.getElementById("pga");
+				var us = document.getElementById("us");
+				var open = document.getElementById("open");
+				if (us.style.display === "none") {
+					masters.style.display = "none";
+					pga.style.display = "none";
+					us.style.display = "block";
+					open.style.display = "none";
+				}
+			}
+			
+			function showOpen(){
+				var masters = document.getElementById("masters");
+				var pga = document.getElementById("pga");
+				var us = document.getElementById("us");
+				var open = document.getElementById("open");
+				if (open.style.display === "none") {
+					masters.style.display = "none";
+					pga.style.display = "none";
+					us.style.display = "none";
+					open.style.display = "block";
+				}
+			}
+			
+			
+		
+		</script>
+</head>
+
+<body style="background-color:#D3D3D3">
+
+
+
+	<style>
+		.regular {
+			border-style: solid;
+			border-width: 2px;
+			margin: auto;
+
+		}
+
+		.header {
+			border-style: solid;
+			border-width: 3px;
+			border-color: #ffdf00;
+			padding: 3px;
+			color: #F21E10;
+			text-align: center;
+		}
+
+		div {
+			text-align: center;
+			display: auto;
+		}
+
+		.myDiv2 {
+			border: 2px outset blue;
+			text-align: center;
+			width: 100%;
+		}
+		
+		.left {
+            @media (min-width: 992px) {
+            .text-left-md {
+                text-align: left;
+            }
+        }	
+		    
+		}
+		
+		.right {
+            @media (min-width: 992px) {
+            .text-right-md {
+                text-align: right;
+            }
+        }		
+		    
+		}
+		
+		
+	</style>
+
+	<div style="background-color:#076652">
+		<h1 class="header" style="font-family: Apple Chancery, cursive; color:white; padding-bottom:5px;">
+			<strong>❀ The Major Majors ❀</strong>
+		</h1>
+	</div>
+
+	<div style="text-align:center;">
+		
+		<form>
+			<label for="fname">Username:</label>
+			<input type="text" name="fname">
+			<label for="lname">Password:</label>
+			<input type="text" name="lname">
+			<input type="submit" id="login">
+			<br>
+			<br>
+		</form>
+		
+	</div>
+
+	<div class="container-fluid" style="text-align:center">
+		<div class="row">
+			<div class="col myDiv" style="border-right:1px solid; text-align:right">
+				<h6> Links to Major Websites: </h6>
+				<a href="https://www.masters.com">Masters.com</a>
+				<a href="https://www.pgachampionship.com">PGAChampionship.com</a>
+				<a href="https://www.usopen.com">USOpen.com</a>
+				<a href="https://www.theopen.com">TheOpen.com</a>
+			</div>
+
+			<div class="col myDiv" style="text-align:left;">
+				<h6> Other Pages: </h6>
+				<a href="./masters.html">Masters Page</a>
+				<a href="./masters.html">PGA Championship Page</a>
+				<a href="./masters.html">US Open Page</a>
+				<a href="./masters.html">The Open Page</a>
+				<a href="./golfrankings.html">World Golf Rankings</a>
+			</div>
+		</div>
+	</div>
+
+	<br>
+
+	<div class=" container-fluid myDiv">
+
+		<div class="row">
+			<div class="col">
+				<h4> Click to Show Last 5 Scores: </h4>
+				<input type="radio" id="mastersbutton" name="tournament" value="The Masters" onclick="return showMasters()">
+				<label for="masters">The Masters</label><br>
+				<input type="radio" id="pgabutton" name="tournament" value="PGA Championship" onclick="return showPGA()">
+				<label for="pga">PGA Championship</label><br>
+				<input type="radio" id="usbutton" name="tournament" value="US Open" onclick="return showUS()">
+				<label for="us">US Open</label><br>
+				<input type="radio" id="openbutton" name="tournament" value="The Open" onclick="return showOpen()">
+				<label for="open">The Open</label><br>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="row">
+			<div class="col" id="masters" style="display: none;"><br>
+				<img class="regular" src="The_Masters_Logo.jpg" alt="Masters Logo" width=240 height=300>
+				<table class="regular">
+					<tbody>
+						<tr>
+							<th>Year</th>
+							<th>Name</th>
+							<th>Score</th>
+						</tr>
+						<tr>
+							<th>2021</th>
+							<th>Hideki Matsuyama</th>
+							<th>-10</th>
+						</tr>
+						<tr>
+							<th>2020</th>
+							<th>Dustin Johnson</th>
+							<th>-20</th>
+						</tr>
+						<tr>
+							<th>2019</th>
+							<th>Tiger Woods</th>
+							<th>-13</th>
+						</tr>
+						<tr>
+							<th>2018</th>
+							<th>Patrick Reed</th>
+							<th>-15</th>
+						</tr>
+						<tr>
+							<th>2017</th>
+							<th>Sergio Garcia</th>
+							<th>-9</th>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+
+
+			<div class="col myDiv" id="us" style="display: none;"><br>
+				<img class="regular" src="US_Open_Logo.jpg" alt="US Open Logo" width=270 height=300>
+				<table class="regular">
+					<tbody>
+						<tr>
+							<th>Year</th>
+							<th>Name</th>
+							<th>Score</th>
+						</tr>
+						<tr>
+							<th>2021</th>
+							<th>John Rahm</th>
+							<th>-6</th>
+						</tr>
+						<tr>
+							<th>2020</th>
+							<th>Bryson Dechambeau</th>
+							<th>-6</th>
+						</tr>
+						<tr>
+							<th>2019</th>
+							<th>Gary Woodland</th>
+							<th>-13</th>
+						</tr>
+						<tr>
+							<th>2018</th>
+							<th>Brooks Koepka</th>
+							<th>+1</th>
+						</tr>
+						<tr>
+							<th>2017</th>
+							<th>Brooks Koepka</th>
+							<th>-16</th>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		
+
+ 
+
+		
+			<div class="col" id="pga" style="display:none;"><br>
+				<img class="regular" src="PGA_Championship_Logo.png" alt="PGA Championship Logo" width=350 height=300>
+				<table class="regular">
+					<tbody>
+						<tr>
+							<th>Year</th>
+							<th>Name</th>
+							<th>Score</th>
+						</tr>
+						<tr>
+							<th>2021</th>
+							<th>Phil Mickelson</th>
+							<th>-6</th>
+						</tr>
+						<tr>
+							<th>2020</th>
+							<th>Collin Morikawa</th>
+							<th>-13</th>
+						</tr>
+						<tr>
+							<th>2019</th>
+							<th>Brooks Koepka</th>
+							<th>-8</th>
+						</tr>
+						<tr>
+							<th>2018</th>
+							<th>Brooks Koepka</th>
+							<th>-16</th>
+						</tr>
+						<tr>
+							<th>2017</th>
+							<th>Justin Thomas</th>
+							<th>-8</th>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+
+			<br>
+
+			<div class="col myDiv" id="open" style="display:none;"><br>
+				<img class="regular" src="The_Open_Logo.png" alt="The Open Logo" width=500 height=300>
+				<table class="regular">
+					<tbody>
+						<tr>
+							<th>Year</th>
+							<th>Name</th>
+							<th>Score</th>
+						</tr>
+						<tr>
+							<th>2021</th>
+							<th>Collin Morikawa</th>
+							<th>-15</th>
+						</tr>
+						<tr>
+							<th>2020</th>
+							<th>N/A</th>
+							<th>N/A</th>
+						</tr>
+						<tr>
+							<th>2019</th>
+							<th>Shane Lowry</th>
+							<th>-15</th>
+						</tr>
+						<tr>
+							<th>2018</th>
+							<th>Francesco Molinari</th>
+							<th>-8</th>
+						</tr>
+						<tr>
+							<th>2017</th>
+							<th>Jordan Spieth</th>
+							<th>-12</th>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+	
+	<div class="container">
+	    <div class="row">
+	        <div class="">
+	            <h3> Weekly Survey!: </h3>
+	        </div>
+	        
+	        <div class="col-12 col-md-6"> 
+    	        <form>
+    	            <br>
+                		<label for="survey">Who is your favorite golfer:</label>
+                		<input type="text" name="survey" >
+                </form> 
+	        </div>
+	        
+	        <div class="col-12 col-md-6">
+	            <br>
+	            <input type="submit" name="submitsurvey" >
+	        </div>
+	        
+	        
+	    </div>
+        	   
+	</div>
+	
+	
+
+
+</body>
+
+</html>
